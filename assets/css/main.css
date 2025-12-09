@@ -97,6 +97,49 @@ ul {
   }
 }
 
+/* shop now section */
+
+.shopNow {
+  background-image: url("./../images/shopNow.png");
+  height: 460px;
+}
+.shopNow .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shopNow h2 {
+  color: #151875;
+  font-family: "josefin sans", sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 155%;
+}
+.shopNow .newsDetails {
+  width: 570px;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.shopNow a {
+  background-color: var(--pink_color);
+  padding: 15px 30px;
+  color: white;
+  border-radius: 2px;
+  font-family: "josefin sans", sans-serif;
+  font-size: 17px;
+  width: max-content;
+}
+
 /* footer section styling */
 
 .footer {
@@ -189,13 +232,13 @@ ul {
     margin-top: 30px;
   }
   .footer-list {
-    width: calc((100% - 100px)/2);
+    width: calc((100% - 100px) / 2);
     flex-direction: column;
     gap: 30px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 680px) {
-   .footer-left,
+  .footer-left,
   .footer-right {
     width: 100%;
   }
@@ -208,5 +251,4 @@ ul {
     width: 100%;
     justify-content: space-between;
   }
-  
 }
