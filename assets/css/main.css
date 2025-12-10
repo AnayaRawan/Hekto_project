@@ -103,6 +103,7 @@ ul {
 .shopNow {
   background-image: url("./../images/shopNow.png");
   height: 460px;
+  margin-bottom: 50px;
 }
 .shopNow .container {
   height: 100%;
