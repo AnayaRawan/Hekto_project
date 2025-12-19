@@ -120,7 +120,7 @@ ul {
   line-height: 155%;
 }
 .shopNow .newsDetails {
-  width: 570px;
+  width: 60%;
   text-align: center;
   font-family: "lato", sans-serif;
   font-weight: 400;
@@ -240,6 +240,11 @@ ul {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 680px) {
+
+  .shopNow h2{
+    font-size: 28px;
+  }
+  
   .footer-left,
   .footer-right {
     width: 100%;
