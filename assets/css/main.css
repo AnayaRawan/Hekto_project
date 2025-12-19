@@ -244,7 +244,7 @@ ul {
   .shopNow h2{
     font-size: 28px;
   }
-  
+
   .footer-left,
   .footer-right {
     width: 100%;
@@ -292,32 +292,48 @@ ul {
   padding-bottom: 17px;
   transition: all 0.3s linear;
 }
+.product-view {
+  width: 100%;  
+  height: 275px;
 
-.product-image {
-  width: 100%;
-  height: 236px;
-  text-align: center;
-  background-color: #f6f7fb;
+  background-color: #f7f7f7;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  
+  padding: 10px;
 }
-.product-image img {
-  max-width: 100%;
-  max-height: 100%;
+.product-view .shop_icons {
+  width: 100%;
+  visibility: hidden;
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+  align-items: center;
+}
+.product-view .shop_icons:hover {
+  cursor: pointer;
 }
 
-.product-image a{
-  background-color: #08D15F;
+.product-view a {
+  background-color: #08d15f;
   color: white;
   padding: 8px 13px;
+  margin-bottom: 10px;
   font-family: "josefin sans", sans-serif;
   font-size: 12px;
   border-radius: 2px;
   text-transform: capitalize;
-  display: none;
+  visibility: hidden;
+  /* opacity: 0; */
+}
+.product-image .shop_icons {
+  display: flex;
+  gap: 10px;
+  align-items: left;
+  visibility: hidden;
 }
 
 .product-image .shop_icons{
@@ -382,8 +398,10 @@ ul {
   background-color: #ffeac1;
 }
 
-.product-item:hover .product-image a {
-  display: block;
+.product-item:hover .product-view a,
+.product-item:hover .shop_icons {
+  visibility: visible;
+  /* opacity: 1; */
 }
 /* media queries for products section */
 @media screen and (min-width: 680px) and (max-width: 990px) {
