@@ -337,8 +337,7 @@ ul {
 /* products section */
 
 .products {
-  margin-top: 120px;
-  margin-bottom: 120px;
+  padding: 50px 0;
 }
 
 .products h2 {
@@ -366,55 +365,58 @@ ul {
   padding-bottom: 17px;
   transition: all 0.3s linear;
 }
-.product-view {
+
+.product-image {
   width: 100%;
   height: 275px;
-
   background-color: #f7f7f7;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
-
   padding: 10px;
+  position: relative;
 }
-.product-view .shop_icons {
+.product-image .shop_icons {
   width: 100%;
   visibility: hidden;
   display: flex;
   gap: 10px;
   justify-content: left;
   align-items: center;
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
-.product-view .shop_icons:hover {
+.shop_icons i {
+  background: linear-gradient(
+    0,
+    rgba(19, 137, 255, 1) 0%,
+    rgba(29, 180, 231, 1) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.product-image img {
+  max-height: 150px;
+}
+
+.product-image .shop_icons:hover {
   cursor: pointer;
 }
 
-.product-view a {
+.product-image a {
   background-color: #08d15f;
   color: white;
   padding: 8px 13px;
-  margin-bottom: 10px;
   font-family: "josefin sans", sans-serif;
   font-size: 12px;
   border-radius: 2px;
   text-transform: capitalize;
   visibility: hidden;
-  /* opacity: 0; */
-}
-.product-image .shop_icons {
-  display: flex;
-  gap: 10px;
-  align-items: left;
-  visibility: hidden;
 }
 
-.product-image .shop_icons {
-  display: flex;
-  gap: 10px;
-  align-items: left;
-}
 .product-details {
   display: flex;
   flex-direction: column;
@@ -472,19 +474,25 @@ ul {
   background-color: #ffeac1;
 }
 
-.product-item:hover .product-view a,
-.product-item:hover .shop_icons {
+.product-item:hover .product-image a,
+.product-item:hover .product-image .shop_icons {
   visibility: visible;
   /* opacity: 1; */
 }
 /* media queries for products section */
 @media screen and (min-width: 680px) and (max-width: 990px) {
+  .products h2 {
+    font-size: 36px;
+  }
   .product-item {
     width: calc((100% - 60px) / 2);
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 680px) {
+  .products h2 {
+    font-size: 28px;
+  }
   .product-item {
     width: 100%;
   }
