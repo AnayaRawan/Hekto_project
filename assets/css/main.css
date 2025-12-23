@@ -556,6 +556,7 @@ ul {
 .blog-title {
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
+  transition: color ease 0.3s;
 }
 .blog-details p {
   color: #72718f;
@@ -568,6 +569,12 @@ ul {
   font-family: "lato", sans-serif;
   font-size: 16px;
   line-height: 30px;
+  transition: color ease 0.3s;
+}
+
+.blog:hover .blog-title,
+.blog:hover a {
+  color: var(--pink_color) !important;
 }
 
 @media screen and (min-width: 680px) and (max-width: 990px) {
