@@ -182,13 +182,15 @@ ul {
 
 .products,
 .trending,
-.top_products {
+.top_products,
+.blogs {
   padding: 50px 0;
 }
 
 .products h2,
 .trending h2,
-.top_products h2 {
+.top_products h2,
+.blogs h2 {
   font-family: "josefin sans", sans-serif;
   font-weight: bold;
   font-size: 42px;
@@ -200,7 +202,8 @@ ul {
 
 .products .row,
 .trending .row,
-.top_products .row {
+.top_products .row,
+.blogs .row {
   gap: 30px;
 }
 
@@ -361,6 +364,7 @@ ul {
 }
 .top_products .product {
   box-shadow: none;
+  box-shadow: 0 8px 40px rgba(49, 32, 138, 0.05);
 }
 .product-name {
   font-size: 20px;
@@ -369,6 +373,7 @@ ul {
 }
 .top_products .product-image {
   border-radius: 50%;
+  box-shadow: 0 8px 40px rgba(49, 32, 138, 0.05);
 }
 .top_products .product:hover .product-image {
   box-shadow: -12px 4px 0 0 #9574e5, 0 0 40px rgba(255, 255, 255, 0.5);
@@ -502,6 +507,85 @@ ul {
   font-family: "josefin sans", sans-serif;
   font-size: 17px;
   width: max-content;
+}
+
+/* Blogs section */
+
+.blog {
+  width: calc((100% - 60px) / 3);
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0 8px 40px rgba(49, 32, 138, 0.05);
+}
+.blog-img {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.blog-img img {
+  width: 100%;
+  border-radius: 8px;
+}
+.blog-img .blog-icons {
+  display: flex;
+  gap: 29px;
+  padding: 0 10px;
+}
+.blog-icons span {
+  font-size: 12px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.blog-icons i {
+  margin: 0 3px;
+}
+.blog-icons .author i {
+  color: #fb2e86;
+}
+.blog-icons .date i {
+  color: #ffa454;
+}
+.blog-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+.blog-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+}
+.blog-details p {
+  color: #72718f;
+  font-family: "lato", sans-serif;
+  line-height: 30px;
+  font-size: 16px;
+}
+.blog-details a {
+  text-decoration: underline;
+  font-family: "lato", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 680px) and (max-width: 990px) {
+  .blogs h2 {
+    font-size: 36px;
+  }
+  .blog {
+    width: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 680px) {
+  .blogs h2 {
+    font-size: 28px;
+  }
+  .blog {
+    width: 100%;
+  }
 }
 
 /* footer section styling */
