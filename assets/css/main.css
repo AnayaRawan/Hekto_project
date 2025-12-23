@@ -181,12 +181,14 @@ ul {
 /* products section */
 
 .products,
-.trending {
+.trending,
+.top_products {
   padding: 50px 0;
 }
 
 .products h2,
-.trending h2 {
+.trending h2,
+.top_products h2 {
   font-family: "josefin sans", sans-serif;
   font-weight: bold;
   font-size: 42px;
@@ -197,12 +199,14 @@ ul {
 }
 
 .products .row,
-.trending .row {
+.trending .row,
+.top_products .row {
   gap: 30px;
 }
 
 .product-item,
-.trending .product {
+.trending .product,
+.top_products .product {
   width: calc((100% - 90px) / 4);
   display: flex;
   flex-direction: column;
@@ -214,9 +218,9 @@ ul {
   transition: all 0.3s linear;
 }
 
-.product-item .product-image {
+/* .product-item .product-image {
   height: 275px;
-}
+} */
 .product-image {
   width: 100%;
   background-color: #f6f7fb;
@@ -227,6 +231,7 @@ ul {
   gap: 10px;
   padding: 10px;
   position: relative;
+  transition: all 0.3s linear;
 }
 .product-image .shop_icons {
   width: 100%;
@@ -341,7 +346,7 @@ ul {
 }
 .product-item:hover span,
 .product-item:hover h3 {
-  color: white;
+  color: white !important;
 }
 
 .product-item:hover .blue {
@@ -349,29 +354,48 @@ ul {
 }
 
 .product-item:hover .product-image a,
-.product-item:hover .product-image .shop_icons {
+.product-item:hover .product-image .shop_icons,
+.product:hover .product-image a {
   visibility: visible;
   /* opacity: 1; */
+}
+.top_products .product {
+  box-shadow: none;
+}
+.product-name {
+  font-size: 20px;
+  word-spacing: 6px;
+  text-transform: capitalize;
+}
+.top_products .product-image {
+  border-radius: 50%;
+}
+.top_products .product:hover .product-image {
+  box-shadow: -12px 4px 0 0 #9574e5, 0 0 40px rgba(255, 255, 255, 0.5);
 }
 /* media queries for products section */
 @media screen and (min-width: 680px) and (max-width: 990px) {
   .products h2,
-  .trending h2 {
+  .trending h2,
+  .top_products h2 {
     font-size: 36px;
   }
   .product-item,
-  .trending .product {
+  .trending .product,
+  .top_products h2 {
     width: calc((100% - 60px) / 2);
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 680px) {
   .products h2,
-  .trending h2 {
+  .trending h2,
+  .top_products h2 {
     font-size: 28px;
   }
   .product-item,
-  .trending .product {
+  .trending .product,
+  .top_products h2 {
     width: 100%;
   }
 }
