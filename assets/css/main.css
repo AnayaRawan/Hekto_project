@@ -47,6 +47,7 @@ ul {
   background-color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   padding: 15px 0;
+  z-index: 1000;
 }
 .header .container {
   margin-top: 47px;
@@ -247,10 +248,12 @@ ul {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.product-image img {
+.product-item .product-image img {
   max-height: 150px;
 }
-
+.product .product-image {
+  height: 244px;
+}
 .product-image .shop_icons:hover {
   cursor: pointer;
 }
@@ -330,7 +333,7 @@ ul {
 }
 
 .trending .product {
-  padding: 12px;
+  padding: 12px 12px 32px 12px;
 }
 
 .product-item:hover {
