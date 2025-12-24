@@ -12,9 +12,9 @@ html {
   --dark_blue_color: #151875;
 }
 
-body {
+/* body {
   height: 6000px;
-}
+} */
 
 a {
   text-decoration: none;
@@ -74,7 +74,7 @@ ul {
 }
 
 #home {
-  color: var(--pink_color);
+  color: var(--pink_color) !important;
 }
 
 .search_form form {
@@ -183,14 +183,16 @@ ul {
 .products,
 .trending,
 .top_products,
-.blogs {
+.blogs,
+.latest-products {
   padding: 50px 0;
 }
 
 .products h2,
 .trending h2,
 .top_products h2,
-.blogs h2 {
+.blogs h2,
+.latest-products h2 {
   font-family: "josefin sans", sans-serif;
   font-weight: bold;
   font-size: 42px;
@@ -405,6 +407,90 @@ ul {
   }
 }
 
+.latest-products .row {
+  justify-content: center;
+  margin-top: 60px;
+}
+.product-list {
+  column-gap: 37px;
+  row-gap: 60px;
+}
+
+.latest-products ul {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.latest-products a {
+  font-size: 18px;
+  font-family: "lato", sans-serif;
+  transition: all ease 0.3s;
+}
+
+.latest-products a:hover {
+  color: var(--pink_color) !important;
+  text-decoration: underline;
+}
+
+.late-product {
+  width: calc((100% - 74px) / 3);
+}
+
+.late-product .product-img {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 33px 64px 8px 73px;
+  height: 280px;
+}
+
+.late-product .product-info {
+  padding: 16px 5px 5px 0;
+}
+
+.product-info .product-type {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.late-product .product-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.late-prices {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.late-prices .old-price {
+  color: #fb2448;
+}
+
+@media screen and (min-width: 680px) and (max-width: 990px) {
+  .latest-products h2 {
+    font-size: 36px;
+  }
+  .late-product {
+    width: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 680px) {
+  .latest-products h2 {
+    font-size: 28px;
+  }
+  .late-product {
+    width: 100%;
+  }
+}
 /* services section  */
 
 .services {
